@@ -7,4 +7,5 @@
 
 
 > その他の設定はprettierを準拠
+
 > 詳細は```./.vscode/setting.json```を参照
