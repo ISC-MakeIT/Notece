@@ -1,5 +1,10 @@
 <img src="https://uploda1.ysklog.net/eee1d71487629b9e9785d8ce46866d3f.png">
 
+# ディレクトリ構造
+>rootはブランチと同じ名前にしてください(workは含めずに)
+
+<img src="https://uploda1.ysklog.net/1d8ce29b857e00e110e5e2a44dd20899.png">
+
 # コーディング規約
 |設定|詳細|
 |----|---|
@@ -8,9 +13,24 @@
 
 > * その他の設定はprettierを準拠
 > * 詳細は```./.vscode/setting.json```を参照
+## CSS
+### プロパティ
+>アルファベット順に記述する
+```css
+/*sample*/
+#hoge {
+  align-text: center;
+  background: #2b2b2b;
+  color: #000;
+}
+```
+### ファイルの分割
+>コンテンツごとに分ける<br>
+htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportする<br>
+//例=>style.css, header.css, main.css, footer.css<br>
 # GitHub
 ## ブランチ
-> ページごとに作る<br>
+>ページごとに作る<br>
 //NewNote<br>
 //NewNote-work =>　作業用
 ## コミット粒度
