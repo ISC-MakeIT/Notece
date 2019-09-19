@@ -1,14 +1,14 @@
-# Notece
+<img src="https://uploda1.ysklog.net/eee1d71487629b9e9785d8ce46866d3f.png">
+
 # コーディング規約
 |設定|詳細|
 |----|---|
 |改行コード|CRLF|
 |スペース | 4 |
 
-
 > * その他の設定はprettierを準拠
 > * 詳細は```./.vscode/setting.json```を参照
-# github
+# GitHub
 ## コミット粒度
 >コミット=セーブです<br>
 1タスクごとにコミットしましょう　事故を減らします。<br>
