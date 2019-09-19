@@ -35,13 +35,28 @@ htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportす�
 //例=>style.css, header.css, main.css, footer.css<br>
 
 ### 使用単位
-相対単位のみとする<br>
-絶対単位は使用禁止
+相対単位のみ使用可
+```css
+html {
+  font-size: 10px;
+}
+```
+を指定し、標準単位はremとします。
+remはhtml要素に指定されたpxを基準とします。
+```css
+p {
+  font-size: 1rem; //1rem=10px
+}
+```
+その他の単位は適宜変えてください。
+単位の違いは<a href="https://programming-style.com/css/reference/unit/" target="_blank" rel="noopener">このサイト</a>を参考にしてください。
+  
 ***
 # JS
 ### 多分動くと思うからリリースしようぜ
-とりあえず言われた機能を実装することを意識してください<br>
+とりあえず求められている機能を実装することを意識してください<br>
 コードはいくら綺麗に書いても動かなければ意味はありません。<br>
+ただし規約はできる限り遵守してください。些細なことでも無視し続ければ全体的に瓦解します。<br>
 リファクタリングは動いてからやりましょう。<br>
 
 ***
