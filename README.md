@@ -11,7 +11,6 @@
 # GitHub
 ## ブランチ
 > ページごとに作る<br>
-命名はキャメルケース<br>
 //NewNote<br>
 //NewNote-work =>　作業用
 ## コミット粒度
