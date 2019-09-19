@@ -1,0 +1,14 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    div#background {
+        background: #c49a6a;
+        height: 100%;
+        border-radius: 1.5rem;
+        div#canvas-wrapper {
+            height: 100%;
+        }
+    }
+}
