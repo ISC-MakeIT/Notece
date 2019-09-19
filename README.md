@@ -22,10 +22,10 @@
 |-|-|-|-|
 |例|ADD|file|index.html|
 ### 対象
-| | | | | |
-|-|-|-|-|-|
-|ファイル:file|定数:constant|変数:variable|関数:method|構造:structure|
-|フォルダー:directory|
+| | | |
+|-|-|-|
+|ファイル:file|定数:constant|変数:variable|
+|フォルダー:directory|関数:method|構造:structure|
 
 ### 接頭辞
 #### ADD
