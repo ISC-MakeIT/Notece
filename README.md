@@ -16,6 +16,7 @@ rootはブランチと同じ名前にしてください(workは含めずに)
 
 * その他の設定はprettierを準拠
 * 詳細は```./.vscode/setting.json```を参照
+<<<<<<< HEAD
 
 ***
 # CSS
@@ -34,6 +35,26 @@ rootはブランチと同じ名前にしてください(workは含めずに)
 htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportする<br>
 //例=>style.css, header.css, main.css, footer.css<br>
 
+=======
+
+***
+# CSS
+### プロパティ
+アルファベット順に記述する
+```css
+/*sample*/
+#hoge {
+  align-text: center;
+  background: #2b2b2b;
+  color: #000;
+}
+```
+### ファイルの分割
+コンテンツごとに分ける<br>
+htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportする<br>
+//例=>style.css, header.css, main.css, footer.css<br>
+
+>>>>>>> d1fd13936b2eceb2fb1d125cd966fe9c4aae316b
 ### 使用単位
 相対単位のみ使用可
 ```css
@@ -41,6 +62,7 @@ html {
   font-size: 10px;
 }
 ```
+<<<<<<< HEAD
 を指定し、標準単位はremとします。
 remはhtml要素に指定されたpxを基準とします。
 ```css
@@ -57,6 +79,22 @@ p {
 とりあえず求められている機能を実装することを意識してください<br>
 コードはいくら綺麗に書いても動かなければ意味はありません。<br>
 ただし規約はできる限り遵守してください。些細なことでも無視し続ければ全体的に瓦解します。<br>
+=======
+を指定しremを標準単位とする。<br>
+>remはhtmlのfont-sizeを基準として計算されるので
+```css
+#hoge {
+  font-size: 2rem;//10px * 2 = 20pxとなる
+}
+```
+
+***
+# JS
+### 多分動くと思うからリリースしようぜ
+とりあえず言われた機能を実装することを意識してください<br>
+コードはいくら綺麗に書いても動かなければ意味はありません。<br>
+ですが規約は基本的に遵守しましょう。細かいところでも無視していくと瓦解します。
+>>>>>>> d1fd13936b2eceb2fb1d125cd966fe9c4aae316b
 リファクタリングは動いてからやりましょう。<br>
 
 ***
