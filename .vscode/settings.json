@@ -3,7 +3,11 @@
         {
             "format": "expanded",
             "extensionName": ".css",
+<<<<<<< HEAD
             "savePath": "~/../style/"
+=======
+            "savePath": "/Note/style/"
+>>>>>>> d1fd13936b2eceb2fb1d125cd966fe9c4aae316b
         }
     ],
     "editor.insertSpaces": true,
