@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/Log.scss"
+    ],
+    "names": [],
+    "file": "Log.css"
+}
