@@ -20,7 +20,7 @@ body #background {
   height: 100%;
 }
 
-body #background #canvas-wrapper {
+body #background #root {
   background: #fff;
   border-radius: 0 24px 24px 0;
   -ms-grid-column: 2;
