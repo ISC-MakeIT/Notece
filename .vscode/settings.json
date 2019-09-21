@@ -3,7 +3,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/Note/style/"
+            "savePath": "~/../style/"
         }
     ],
     "editor.insertSpaces": true,
