@@ -10,12 +10,38 @@ class Canvas {
         this.board.freeDrawingBrush.width = 4;
     }
     setTools = () => {
-        const tmp = document.getElementById('tag-wrapper').children;
+        const trigger = document.getElementById('tag-wrapper').children;
+        const methods = [
+            this.changeBrushSize,
+            this.changeColor,
+            this.createArt,
+            this.createTextBox,
+            this.hoge,
+            this.huga
+        ]
         for (let i = 0; i < 6; i++) {
-            tmp[i].onclick = () => {
-                console.log('hoge');
+            trigger[i].onclick = () => {
+                methods[i]();
             }
         }
+    }
+    changeBrushSize = () => {
+        console.log('BrushSize');
+    }
+    changeColor = () => {
+        console.log('color');
+    }
+    createArt = () => {
+        console.log('Art');
+    }
+    createTextBox = () => {
+        console.log('TextBox');
+    }
+    hoge = () => {
+        console.log('hoge');
+    }
+    huga = () => {
+        console.log('huga');
     }
 }
 
