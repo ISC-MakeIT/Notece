@@ -1,5 +1,5 @@
-import { Menu } from './Menu';
-export default class NewNote extends Menu {
+import Menu from './Menu';
+class NewNote extends Menu {
     init() {
         this.createLabel(
             'url(../img/newPage.png)',
@@ -31,3 +31,5 @@ export default class NewNote extends Menu {
         div.appendChild(btn);
     }
 }
+
+export default NewNote;

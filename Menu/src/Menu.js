@@ -1,4 +1,4 @@
-export default class Menu {
+class Menu {
     constructor() {
         this.root = document.getElementById('root');
     }
@@ -10,3 +10,5 @@ export default class Menu {
         targetPage.init();
     }
 }
+
+export default Menu;

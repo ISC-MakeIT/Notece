@@ -1,7 +1,6 @@
 {
     "scripts": {
-        "build": "webpack",
-        "watch": "webpack --watch"
+        "build": "webpack"
     },
     "devDependencies": {
         "webpack": "^4.40.2",
