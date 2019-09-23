@@ -75,26 +75,26 @@ body {
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(1) {
-  background: url("../img/Tag1.png");
+  background: url("../img/Tag1.png") center no-repeat;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(2) {
-  background: url("../img/Tag2.png");
+  background: url("../img/Tag2.png") center no-repeat;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(3) {
-  background: url("../img/Tag3.png");
+  background: url("../img/Tag3.png") center no-repeat;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(4) {
-  background: url("../img/Tag4.png");
+  background: url("../img/Tag4.png") center no-repeat;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(5) {
-  background: url("../img/Tag5.png");
+  background: url("../img/Tag5.png") center no-repeat;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(6) {
-  background: url("../img/Tag6.png");
+  background: url("../img/Tag6.png") center no-repeat;
 }
 /*# sourceMappingURL=Note.css.map */
