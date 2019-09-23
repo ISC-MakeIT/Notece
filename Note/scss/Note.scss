@@ -48,7 +48,7 @@ body {
             }
             @for $i from 1 through 6 {
                 .tag:nth-child(#{$i}) {
-                    background: url('../img/Tag#{$i}.png');
+                    background: url('../img/Tag#{$i}.png') center no-repeat;
                 }
             }
         }
