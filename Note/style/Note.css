@@ -35,6 +35,10 @@ body {
   border-radius: 2.4rem 0 0 2.4rem;
 }
 
+#background #canvas-wrapper .upper-canvas {
+  border-radius: 2.4rem;
+}
+
 #background #side-wrapper {
   background: #fff;
   border-radius: 0 2.4rem 2.4rem 0;
@@ -67,7 +71,6 @@ body {
 }
 
 #background #tool-wrapper #tag-wrapper .tag {
-  background-size: cover;
   display: block;
   height: 13%;
   margin: 0 0 2rem 0;
@@ -76,25 +79,31 @@ body {
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(1) {
   background: url("../img/Tag1.png") center no-repeat;
+  background-size: cover;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(2) {
   background: url("../img/Tag2.png") center no-repeat;
+  background-size: cover;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(3) {
   background: url("../img/Tag3.png") center no-repeat;
+  background-size: cover;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(4) {
   background: url("../img/Tag4.png") center no-repeat;
+  background-size: cover;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(5) {
   background: url("../img/Tag5.png") center no-repeat;
+  background-size: cover;
 }
 
 #background #tool-wrapper #tag-wrapper .tag:nth-child(6) {
   background: url("../img/Tag6.png") center no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=Note.css.map */
