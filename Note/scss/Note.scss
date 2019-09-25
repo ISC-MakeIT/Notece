@@ -21,6 +21,9 @@ body {
             background: #fff;
             border-radius: 2.4rem 0 0 2.4rem;
         }
+        .upper-canvas {
+            border-radius: 2.4rem;
+        }
     }
     #side-wrapper {
         background: #fff;
@@ -40,7 +43,6 @@ body {
             height: 100%;
             padding: 7.2rem 0 0 0;
             .tag {
-                background-size: cover;
                 display: block;
                 height: 13%;
                 margin: 0 0 2rem 0;
@@ -49,6 +51,7 @@ body {
             @for $i from 1 through 6 {
                 .tag:nth-child(#{$i}) {
                     background: url('../img/Tag#{$i}.png') center no-repeat;
+                    background-size: cover;
                 }
             }
         }
