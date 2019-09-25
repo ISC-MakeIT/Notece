@@ -15,10 +15,10 @@ class Canvas {
     setTools = () => {
         const trigger = document.getElementById('tag-wrapper').children;
         const methods = [
-            this.changeBrushSize,
-            this.changeColor,
-            this.createArt,
-            this.createTextBox,
+            this.openBrushModal,
+            this.openColorModal,
+            this.openArtModal,
+            this.openTextBoxModal,
             this.hoge,
             this.huga
         ]
@@ -28,16 +28,16 @@ class Canvas {
             }
         }
     }
-    changeBrushSize = () => {
+    openBrushModal = () => {
         console.log('BrushSize');
     }
-    changeColor = () => {
+    openColorModal = () => {
         console.log('color');
     }
-    createArt = () => {
+    openArtModal = () => {
         console.log('Art');
     }
-    createTextBox = () => {
+    openTextBoxModal = () => {
         console.log('TextBox');
     }
     hoge = () => {
@@ -51,9 +51,8 @@ class Canvas {
 const canvas = new Canvas();
 canvas.setTools();
 window.onresize = () => {
-    console.log('hi');
     const parentSize = document.getElementById('canvas-wrapper');
     canvas.board.setWidth(parentSize.clientWidth);
     canvas.board.setHeight(parentSize.clientHeight);
-    console.log(parentSize.clientHeight);
+    console.log(parentSize.clientWidth, parentSize.clientHeight);
 }
