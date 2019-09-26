@@ -54,5 +54,4 @@ window.onresize = () => {
     const parentSize = document.getElementById('canvas-wrapper');
     canvas.board.setWidth(parentSize.clientWidth);
     canvas.board.setHeight(parentSize.clientHeight);
-    console.log(parentSize.clientWidth, parentSize.clientHeight);
 }
