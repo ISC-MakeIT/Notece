@@ -1,0 +1,57 @@
+body #canvas #root {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #canvas #root #newPage {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 90%;
+  position: relative;
+  width: 41%;
+}
+
+body #canvas #root #newPage div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  height: 20%;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
+
+body #canvas #root #fileLog {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 90%;
+  position: relative;
+  width: 41%;
+}
+
+body #canvas #root #fileLog div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  height: 20%;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
+/*# sourceMappingURL=newNote.css.map */
