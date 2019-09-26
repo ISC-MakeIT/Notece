@@ -5,8 +5,26 @@ import Search from '../src/Search';
 import Setting from '../src/Setting';
 const menu = new Menu();
 const newNote = new NewNote();
-const Profile = new Profile();
-const Search = new Search();
-const Setting = new Setting();
+const profile = new Profile();
+const search = new Search();
+const setting = new Setting();
 menu.MovePage(newNote);
+
+document.getElementById('newNote').addEventListener('click', () => {
+    menu.MovePage(newNote);
+});
+
+document.getElementById('Serach').addEventListener('click', () => {
+    menu.MovePage(search);
+});
+
+document.getElementById('Profile').addEventListener('click', () => {
+    menu.MovePage(profile);
+});
+
+document.getElementById('Setting').addEventListener('click', () => {
+    menu.MovePage(setting);
+});
+
+
 
