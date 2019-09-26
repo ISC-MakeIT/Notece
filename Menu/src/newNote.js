@@ -8,7 +8,7 @@ class NewNote extends Menu {
         );
         this.createLabel(
             'url(../img/filelog.png)',
-            'newPage',
+            'fileLog',
             'url(../img/ViewLog.png)'
         );
     }
