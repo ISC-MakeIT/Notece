@@ -19,16 +19,16 @@ class Setting extends Menu {
             if (get.className == 'text') {
                 get.className = "box";
                 const cont = get.textContent;
-                get.innerHTML = '<input type="text" id="hada" value ="' + cont + '">';
+                get.innerHTML = '<input type="text" id="address" value ="' + cont + '">';
             }
         });
         mail.addEventListener('keypress', () => {
             if (window.event.keyCode == 13) {
                 let set = document.getElementById('mail');
                 set.className = "text";
-                let daizi = document.getElementById('hada').value;
-                console.log(daizi);
-                set.innerHTML = '<div>' + daizi + '</div>';
+                let press = document.getElementById('address').value;
+                console.log(press);
+                set.innerHTML = '<div>' + press + '</div>';
             }
         });
 
