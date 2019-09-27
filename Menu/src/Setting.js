@@ -11,13 +11,38 @@ class Setting extends Menu {
         div.style.backgroundImage = label;
         div.id = labelId;
 
+        const mail = document.createElement('div');
+        mail.id = "mail";
+        mail.className = "text";
+        mail.addEventListener('click', () => {
+            let get = document.getElementById('mail');
+            if (get.className == 'text') {
+                get.className = "box";
+                const cont = get.textContent;
+                get.innerHTML = '<input type="text" id="address" value ="' + cont + '">';
+            }
+        });
+        mail.addEventListener('keypress', () => {
+            if (window.event.keyCode == 13) {
+                let set = document.getElementById('mail');
+                set.className = "text";
+                let press = document.getElementById('address').value;
+                console.log(press);
+                set.innerHTML = '<div>' + press + '</div>';
+            }
+        });
+
+        /*
         const fee = document.createElement('div');
         fee.id = fee;
         fee.textContent = "料金プラン詳細";
         fee.style.color = "#2d9cdb";
 
-        this.root.appendChild(div);
+
         div.appendChild(fee);
+        */
+        this.root.appendChild(div);
+        div.appendChild(mail);
     }
 }
 
