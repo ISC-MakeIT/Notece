@@ -1,22 +1,10 @@
 import Menu from './Menu';
 class Profile extends Menu {
     init() {
-        this.createLabel(
-            'url(../img/name.png)',
-            'name'
-        );
-        this.createLabel(
-            'url(../img/gender.png)',
-            'gender'
-        );
-        this.createLabel(
-            'url(../img/date of birth.png)',
-            'date-of-birth'
-        );
-        this.createLabel(
-            'url(../img/message.png)',
-            'message'
-        );
+        this.createLabel('url(../img/name.png)', 'user-name');
+        this.createLabel('url(../img/gender.png)', 'user-gender');
+        this.createLabel('url(../img/birth.png)', 'user-birth');
+        this.createLabel('url(../img/message.png)', 'user-message');
     }
     createLabel(label, labelId) {
         const div = document.createElement('div');
