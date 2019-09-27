@@ -1,0 +1,40 @@
+body {
+    #canvas {
+        #root {
+            position: relative;
+            #user-name,
+            #user-gender,
+            #user-birth,
+            #user-message {
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: absolute;
+            }
+            #user-name {
+                height: 9.4%;
+                left: 0;
+                top: 6%;
+                width: 49%;
+            }
+            #user-gender {
+                height: 12%;
+                left: 0;
+                top: 40%;
+                width: 25%;
+            }
+            #user-birth {
+                height: 14%;
+                left: 10%;
+                top: 80%;
+                width: 27%;
+            }
+            #user-message {
+                bottom: 6%;
+                height: 30%;
+                right: 5%;
+                width: 40%;
+            }
+        }
+    }
+}

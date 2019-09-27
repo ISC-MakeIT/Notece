@@ -1,0 +1,29 @@
+body {
+    #canvas {
+        #root {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .post-it {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+                height: 90%;
+                position: relative;
+                width: 41%;
+                &-btn {
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    bottom: 0;
+                    height: 20%;
+                    left: 0;
+                    margin: 0 auto;
+                    position: absolute;
+                    right: 0;
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

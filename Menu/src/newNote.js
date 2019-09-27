@@ -8,7 +8,7 @@ class NewNote extends Menu {
         );
         this.createLabel(
             'url(../img/filelog.png)',
-            'newPage',
+            'fileLog',
             'url(../img/ViewLog.png)'
         );
     }
@@ -16,9 +16,11 @@ class NewNote extends Menu {
         const div = document.createElement('div');
         div.style.backgroundImage = label;
         div.id = labelId;
+        div.className = 'post-it';
 
         const btn = document.createElement('div');
         btn.style.backgroundImage = btnImg;
+        btn.className = 'post-it-btn';
         btn.onclick = () => {
             if (div.id === 'newNote') {
                 // go canvas

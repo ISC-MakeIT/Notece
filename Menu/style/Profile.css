@@ -1,0 +1,42 @@
+body #canvas #root {
+  position: relative;
+}
+
+body #canvas #root #user-name,
+body #canvas #root #user-gender,
+body #canvas #root #user-birth,
+body #canvas #root #user-message {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+body #canvas #root #user-name {
+  height: 9.4%;
+  left: 0;
+  top: 6%;
+  width: 49%;
+}
+
+body #canvas #root #user-gender {
+  height: 12%;
+  left: 0;
+  top: 40%;
+  width: 25%;
+}
+
+body #canvas #root #user-birth {
+  height: 14%;
+  left: 10%;
+  top: 80%;
+  width: 27%;
+}
+
+body #canvas #root #user-message {
+  bottom: 6%;
+  height: 30%;
+  right: 5%;
+  width: 40%;
+}
+/*# sourceMappingURL=Profile.css.map */
