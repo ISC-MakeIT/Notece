@@ -7,6 +7,7 @@ class Canvas {
         this.board.isDrawingMode = true;
         this.board.freeDrawingBrush.color = '#2b2b2b';
         this.board.freeDrawingBrush.width = 4;
+        this.setTools();
     }
     resize = () => {
         this.board.setWidth(window.innerWidth);
@@ -15,12 +16,12 @@ class Canvas {
     setTools = () => {
         const trigger = document.getElementById('tag-wrapper').children;
         const methods = [
-            this.openBrushModal,
-            this.openColorModal,
-            this.openArtModal,
-            this.openTextBoxModal,
+            this.openTextBoxMenu,
+            this.openColorMenu,
+            this.openArtMenu,
+            this.openBrushMenu,
             this.hoge,
-            this.huga
+            this.download
         ]
         for (let i = 0; i < 6; i++) {
             trigger[i].onclick = () => {
@@ -28,29 +29,34 @@ class Canvas {
             }
         }
     }
-    openBrushModal = () => {
-        console.log('BrushSize');
+    openTextBoxMenu = () => {
+        console.log('TextBox');
     }
-    openColorModal = () => {
+    openColorMenu = () => {
         console.log('color');
     }
-    openArtModal = () => {
+    openArtMenu = () => {
         console.log('Art');
     }
-    openTextBoxModal = () => {
-        console.log('TextBox');
+    openBrushMenu = () => {
+        console.log('BrushSize');
     }
     hoge = () => {
         console.log('hoge');
     }
-    huga = () => {
-        console.log('huga');
+    download = () => {
+        const check = confirm('このノートを保存しますか？');
+        if (check) {
+            const a = document.createElement('a');
+            a.href = canvas.board.toDataURL('image/png', 1);
+            a.download = "yourNote.png";
+            a.click();
+        }
     }
 }
 
 const canvas = new Canvas();
-canvas.setTools();
-window.onresize = () => {
+window.onresize = async () => {
     const parentSize = document.getElementById('canvas-wrapper');
     canvas.board.setWidth(parentSize.clientWidth);
     canvas.board.setHeight(parentSize.clientHeight);
