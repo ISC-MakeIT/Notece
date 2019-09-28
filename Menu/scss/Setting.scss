@@ -1,0 +1,34 @@
+body {
+    #canvas {
+        #root {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            #userinfo {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center 0;
+                padding-top: 50%;
+                position: relative;
+                width: 41%;
+                #mail {
+                    font-size: 2rem;
+                    height: 5%;
+                    left: 5%;
+                    position: absolute;
+                    top: 28%;
+                    width: 80%;
+                    #address {
+                        background: none;
+                        box-shadow: none;
+                        border: none;
+                        font-size: 2rem;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
