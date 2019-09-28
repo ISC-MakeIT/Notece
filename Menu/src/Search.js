@@ -15,7 +15,11 @@ class Search extends Menu {
         div.style.backgroundImage = label;
         div.id = labelId;
 
+        const searchbox = document.createElement('input');
+        searchbox.type = "text";
+
         this.root.appendChild(div);
+        this.root.appendChild(searchbox);
     }
 }
 
