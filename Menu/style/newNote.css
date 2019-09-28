@@ -16,8 +16,9 @@ body #canvas #root {
 body #canvas #root .post-it {
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center center;
-  height: 90%;
+  background-position: center 0;
+  height: 0;
+  padding-top: 50%;
   position: relative;
   width: 41%;
 }
@@ -25,8 +26,9 @@ body #canvas #root .post-it {
 body #canvas #root .post-it-btn {
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: 0;
-  height: 20%;
+  background-position: center center;
+  top: 70%;
+  height: 25%;
   left: 0;
   margin: 0 auto;
   position: absolute;
