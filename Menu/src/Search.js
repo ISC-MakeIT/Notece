@@ -16,6 +16,7 @@ class Search extends Menu {
         div.id = labelId;
 
         const searchbox = document.createElement('input');
+        searchbox.id = searchbox;
         searchbox.type = "text";
 
         this.root.appendChild(div);
