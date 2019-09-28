@@ -1,23 +1,9 @@
-body #canvas #root {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 body #canvas #root .post-it {
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center center;
-  height: 90%;
+  background-position: center 0;
+  height: 0;
+  padding-top: 50%;
   position: relative;
   width: 41%;
 }
@@ -25,8 +11,9 @@ body #canvas #root .post-it {
 body #canvas #root .post-it-btn {
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: 0;
-  height: 20%;
+  background-position: center center;
+  top: 70%;
+  height: 25%;
   left: 0;
   margin: 0 auto;
   position: absolute;

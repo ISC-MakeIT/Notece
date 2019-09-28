@@ -21,8 +21,18 @@ body #canvas {
 }
 
 body #canvas #root {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
   border-radius: 0 24px 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
@@ -30,6 +40,8 @@ body #canvas #root {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 body #canvas #side-wrapper {

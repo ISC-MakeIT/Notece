@@ -1,0 +1,22 @@
+body #canvas #root #logo {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+}
+
+body #canvas #root #search {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 55%;
+  height: 30%;
+  width: 40%;
+}
+/*# sourceMappingURL=Search.css.map */
