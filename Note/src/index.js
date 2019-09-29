@@ -11,8 +11,10 @@ window.onresize = async () => {
     canvas.board.setWidth(parentSize.clientWidth);
     canvas.board.setHeight(parentSize.clientHeight);
 }
+//command
 window.onkeydown = (e) => {
     if (e.key === "y") { canvas.board.isDrawingMode = !(canvas.board.isDrawingMode); }
+    else if (e.key === "Delete") { canvas.board.remove.apply(canvas.board, canvas.board.getActiveObjects()) }
 }
 //tool
 const textBoxMenu = new TextBoxMenu();
