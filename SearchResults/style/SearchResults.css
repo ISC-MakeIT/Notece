@@ -1,1 +1,178 @@
-/* No CSS *//*# sourceMappingURL=SearchResults.css.map */
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+body #canvas {
+  background: #c49a6a;
+  border-radius: 2.4rem;
+  border: 0.1rem solid #bbb;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.25% 2.5% 1fr 7.5% 1.25%;
+      grid-template-columns: 1.25% 2.5% 1fr 7.5% 1.25%;
+  -ms-grid-rows: 0.625% 1fr 0.625%;
+      grid-template-rows: 0.625% 1fr 0.625%;
+  height: 100%;
+}
+
+body #canvas #root {
+  background: #fff;
+  border-radius: 0 24px 24px 0;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+}
+
+body #canvas #root #search-area {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body #canvas #root #note-list {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+body #canvas #root #note-list .notes {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: calc(100% / 3);
+  height: calc(90% / 3);
+  border: 3px solid #000;
+}
+
+body #canvas #root #detail-wrapper {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  padding: 5%;
+}
+
+body #canvas #root #detail-wrapper #detail {
+  background-image: url("../img/postit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 10% 1fr;
+      grid-template-rows: 30% 10% 1fr;
+  padding: 5%;
+}
+
+body #canvas #root #detail-wrapper #detail #note-thumbnail {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body #canvas #root #detail-wrapper #detail #note-name {
+  text-align: center;
+  font-size: 2.4rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+body #canvas #root #detail-wrapper #detail #note-explanation {
+  text-align: center;
+  font-size: 1.6rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+body #canvas #side-wrapper {
+  background: #fff;
+  border-radius: 2.4rem 0 0 2.4rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #canvas #side-wrapper #side {
+  height: 85%;
+  width: 100%;
+}
+
+body #canvas #tag-wrapper {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+body #canvas #tag-wrapper #tag-container {
+  height: 100%;
+  padding-top: 3.6rem;
+  list-style: none;
+}
+
+body #canvas #tag-wrapper #tag-container .tag {
+  background-size: cover;
+  display: block;
+  height: 14%;
+  margin-bottom: 2.4rem;
+  width: 100%;
+}
+/*# sourceMappingURL=SearchResults.css.map */
