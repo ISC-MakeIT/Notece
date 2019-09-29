@@ -30,6 +30,91 @@ body #canvas #root {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+body #canvas #root #note-list {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body #canvas #root #note-list .notes {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: calc(100% / 3);
+  height: calc(90% / 3);
+  border: 3px solid #000;
+}
+
+body #canvas #root #detail-wrapper {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  padding: 5%;
+}
+
+body #canvas #root #detail-wrapper #detail {
+  background-image: url("../img/postit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 10% 1fr;
+      grid-template-rows: 30% 10% 1fr;
+  padding: 5%;
+}
+
+body #canvas #root #detail-wrapper #detail #note-thumbnail {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body #canvas #root #detail-wrapper #detail #note-name {
+  text-align: center;
+  font-size: 2.4rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+body #canvas #root #detail-wrapper #detail #note-explanation {
+  text-align: center;
+  font-size: 1.6rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
 }
 
 body #canvas #side-wrapper {
@@ -71,6 +156,7 @@ body #canvas #tag-wrapper {
 body #canvas #tag-wrapper #tag-container {
   height: 100%;
   padding-top: 3.6rem;
+  list-style: none;
 }
 
 body #canvas #tag-wrapper #tag-container .tag {
