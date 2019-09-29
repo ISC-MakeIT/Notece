@@ -109,6 +109,7 @@ body {
 
 .js-menuContainer {
   height: 100%;
+  left: 0;
   position: absolute;
   text-align: 'center';
   top: 0;
