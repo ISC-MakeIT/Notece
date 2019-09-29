@@ -57,3 +57,17 @@ body {
         }
     }
 }
+
+.js-menuContainer {
+    height: 100%;
+    position: absolute;
+    text-align: 'center';
+    top: 0;
+    width: 100%;
+    #js-downloadMenu {
+        background: #fff;
+        height: 50vh;
+        margin: 0 auto;
+        width: 80vw;
+    }
+}
