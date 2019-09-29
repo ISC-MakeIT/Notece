@@ -1,4 +1,4 @@
-import Canvas from './Canvas';
-class ArtMenu extends Canvas {
+import Tool from './Tool';
+class ArtMenu extends Tool {
 }
 export default ArtMenu;

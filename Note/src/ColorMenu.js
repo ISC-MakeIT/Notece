@@ -1,4 +1,4 @@
-import Canvas from './Canvas';
-class ColorMenu extends Canvas {
+import Tool from './Tool';
+class ColorMenu extends Tool {
 }
 export default ColorMenu;
