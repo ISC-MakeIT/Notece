@@ -117,9 +117,9 @@ body {
 }
 
 .js-menuContainer #js-downloadMenu {
-  background: #fff;
+  background: #bbb;
   height: 50vh;
-  margin: 0 auto;
+  margin: auto;
   width: 80vw;
 }
 /*# sourceMappingURL=Note.css.map */

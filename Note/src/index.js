@@ -22,9 +22,3 @@ const artMenu = new ArtMenu();
 const colorMenu = new ColorMenu();
 const brushMenu = new BrushMenu();
 const downloadMenu = new DownloadMenu();
-window.onload = () => {
-    const tools = Array(textBoxMenu, artMenu, colorMenu, brushMenu, downloadMenu);
-    tools.forEach(tool => {
-        tool.createTag();
-    })
-}

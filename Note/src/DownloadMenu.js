@@ -1,13 +1,7 @@
 import Tool from './Tool';
 class DownloadMenu extends Tool {
-    action() {
-        const wrapper = document.getElementById('tag-wrapper');
-        const menuContainer = document.createElement('div');
-        menuContainer.className = 'js-menuContainer';
-        const downloadMenu = document.createElement('div');
-        downloadMenu.id = 'js-downloadMenu';
-        wrapper.appendChild(menuContainer);
-        menuContainer.appendChild('menuContents');
+    activate() {
+        this.setAttribute('style', 'height:50vh;width:80vw;z-index:2;');
     }
     convertToPNG() {
         const a = document.createElement('a');
