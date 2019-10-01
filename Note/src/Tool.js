@@ -1,13 +1,10 @@
 class Tool {
     constructor() {
         this.li = document.createElement('li');
+        this.isHoge = false;
+        this.isHuga = true;
     }
-    createTag() {
-        const wrapper = document.getElementById('tag-wrapper');
-        this.li.className = 'tag';
-        this.li.onclick = this.action;
-        wrapper.appendChild(this.li);
-    }
+    createTag() {}
 }
 
 export default Tool;
