@@ -26,16 +26,23 @@ class TextBoxMenu {
             this.target.on('mouse:up', e => {
                 const endX = e.absolutePointer.x;
                 const endY = e.absolutePointer.y;
-                let rect = new fabric.Rect({
-                    left: startX,
-                    top: startY,
-                    originX: 'left',
-                    originY: 'top',
-                    fill: 'red',
+                let rect = new fabric.Textbox('this is sample', {
+                    left: endX,
+                    top: endY,
+                    // 外側に回転のやつを出したいなら条件分岐でやる
+                    // left: startX,
+                    // left: startY,
+                    // fill: 'red',
+                    // width: Math.abs(startX - endX),
+                    // height: Math.abs(startY - endY)
                     width: startX - endX,
                     height: startY - endY
                 });
                 this.target.add(rect);
+                this.target.renderAll();
+                this.target.forEachObject(function(object) {
+                    object.selectable = false;
+                });
             });
         } else {
             console.log('bey');
