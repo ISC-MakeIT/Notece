@@ -24,6 +24,17 @@ const createShape = new CreateShape(canvas.board);
 // const downloadMenu = new DownloadMenu();
 // const tool = new Tool(canvas.board);
 
+window.onkeydown = e => {
+    if (e.key === 'y') {
+        canvas.board.isDrawingMode = !canvas.board.isDrawingMode;
+    } else if (e.key === 'Delete') {
+        canvas.board.remove.apply(
+            canvas.board,
+            canvas.board.getActiveObjects()
+        );
+    }
+};
+
 window.onload = () => {
     const tools = Array(
         createShape
