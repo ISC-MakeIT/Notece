@@ -11,6 +11,7 @@ class CreateShape {
             li.id = type;
             li.className = 'tag';
             li.addEventListener('click', () => {
+                this.target.isDrawingMode = false;
                 this.selectType(type);
             });
             // const div = document.createElement('div');
@@ -29,7 +30,6 @@ class CreateShape {
         let startX;
         let startY;
         if (type === 'Textbox') {
-            console.log('textbox');
             this.target.on('mouse:down', e => {
                 startX = e.absolutePointer.x;
                 startY = e.absolutePointer.y;
@@ -45,6 +45,7 @@ class CreateShape {
                 this.target.off('mouse:down');
             });
         } else {
+            console.log('hello');
             this.target.on('mouse:down', e => {
                 startX = e.absolutePointer.x;
                 startY = e.absolutePointer.y;
@@ -52,44 +53,56 @@ class CreateShape {
             this.target.on('mouse:up', e => {
                 const endX = e.absolutePointer.x;
                 const endY = e.absolutePointer.y;
-                if (type === 'Rect') {
-                    this.createRect(endX, endY, startX - endX, startY - endY);
-                } else if (type === 'Circle') {
-                    if (startX - endX > 0) {
-                        this.createCircle(endX, endY, (startX - endX) / 2);
-                    } else {
-                        this.createCircle(
-                            startX,
-                            startY,
-                            Math.abs((startX - endX) / 2)
-                        );
-                    }
-                }
-                this.target.renderAll();
-                this.target.forEachObject(function(object) {
-                    object.selectable = true;
-                });
+                this.create(startX, startY, endX, endY, type);
                 this.target.off('mouse:down');
                 this.target.off('mouse:up');
             });
+            this.target.renderAll();
+            this.target.forEachObject(function(object) {
+                object.selectable = true;
+            });
         }
     }
-    createRect(left, top, width, height) {
-        const shape = new fabric.Rect({
-            left: left,
-            top: top,
-            width: width,
-            height: height
-        });
-        this.target.add(shape);
-    }
-    createCircle(left, top, radius) {
-        const shape = new fabric.Circle({
-            left: left,
-            top: top,
-            radius: radius
-        });
-        this.target.add(shape);
+
+    create(startX, startY, endX, endY, type) {
+        let leftValue;
+        let topValue;
+        // left,topの決定
+        if (startX - endX > 0 && startY - endY > 0) {
+            leftValue = endX;
+            topValue = endY;
+        } else if (startX - endX > 0 && startY - endY < 0) {
+            leftValue = endX;
+            topValue = startY;
+        } else if (startX - endX < 0 && startY - endY > 0) {
+            leftValue = startX;
+            topValue = endY;
+        } else {
+            leftValue = startX;
+            topValue = startY;
+        }
+        const options = {
+            left: leftValue,
+            top: topValue,
+            fill: '#ccc'
+        };
+        // end
+        if (type === 'Rect') {
+            const rect = new fabric.Rect({
+                ...options,
+                width: Math.abs(startX - endX),
+                height: Math.abs(startY - endY)
+            });
+            console.log('hi');
+            this.target.add(rect);
+        } else {
+            const circle = new fabric.Circle({
+                ...options,
+                radius: Math.abs(startX - endX) / 2
+            });
+            console.log('hi');
+            this.target.add(circle);
+        }
     }
 }
 export default CreateShape;
