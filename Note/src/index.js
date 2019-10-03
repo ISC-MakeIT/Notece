@@ -1,5 +1,5 @@
 import Canvas from './Canvas';
-import TextBoxMenu from './TextBoxMenu';
+import CreateShape from './CreateShape';
 import ArtMenu from './ArtMenu';
 import ColorMenu from './ColorMenu';
 import BrushMenu from './BrushMenu';
@@ -17,7 +17,7 @@ window.onkeydown = e => {
     }
 };
 //tool
-const textBoxMenu = new TextBoxMenu(canvas.board);
+const createShape = new CreateShape(canvas.board);
 // const artMenu = new ArtMenu();
 // const colorMenu = new ColorMenu();
 // const brushMenu = new BrushMenu();
@@ -26,7 +26,7 @@ const textBoxMenu = new TextBoxMenu(canvas.board);
 
 window.onload = () => {
     const tools = Array(
-        textBoxMenu
+        createShape
         // artMenu,
         // colorMenu,
         // brushMenu,
