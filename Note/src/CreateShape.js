@@ -1,37 +1,39 @@
-// import Tool from './Tool';
-class TextBoxMenu {
+class CreateShape {
     constructor(target) {
         this.target = target;
         this.isHoge = false;
         this.isHuga = true;
     }
     action() {
-        const types = ['Rect', 'Circle', 'Textbox', 'Ellipse'];
+        const types = ['Rect', 'Circle', 'Textbox'];
         types.forEach(type => {
             const li = document.createElement('li');
             li.id = type;
             li.className = 'tag';
             li.addEventListener('click', () => {
-                this.createShape(type);
+                this.selectType(type);
             });
+            // const div = document.createElement('div');
+            // div.id = 'select-type';
+            // document.getElementById('tag-wrapper').appendChild(div);
+            // div.appendChild(li);
             document.getElementById('tag-wrapper').appendChild(li);
         });
     }
 
-    createShape(type) {
+    selectType(type) {
         this.target.renderAll();
         this.target.forEachObject(function(object) {
             object.selectable = false;
         });
         let startX;
         let startY;
-        let shape;
         if (type === 'Textbox') {
             console.log('textbox');
             this.target.on('mouse:down', e => {
                 startX = e.absolutePointer.x;
                 startY = e.absolutePointer.y;
-                shape = new fabric.Textbox('this is sample', {
+                const shape = new fabric.Textbox('this is sample', {
                     left: startX,
                     top: startY
                 });
@@ -51,38 +53,18 @@ class TextBoxMenu {
                 const endX = e.absolutePointer.x;
                 const endY = e.absolutePointer.y;
                 if (type === 'Rect') {
-                    console.log('Rect');
-                    shape = new fabric.Rect({
-                        left: endX,
-                        top: endY,
-                        width: startX - endX,
-                        height: startY - endY
-                    });
+                    this.createRect(endX, endY, startX - endX, startY - endY);
                 } else if (type === 'Circle') {
-                    console.log('Circle');
                     if (startX - endX > 0) {
-                        shape = new fabric.Circle({
-                            left: endX,
-                            top: endY,
-                            radius: (startX - endX) / 2
-                        });
+                        this.createCircle(endX, endY, (startX - endX) / 2);
                     } else {
-                        shape = new fabric.Circle({
-                            left: startX,
-                            top: startY,
-                            radius: Math.abs((startX - endX) / 2)
-                        });
+                        this.createCircle(
+                            startX,
+                            startY,
+                            Math.abs((startX - endX) / 2)
+                        );
                     }
-                } else {
-                    // console.log('Ellipse');
-                    // shape = new fabric.Ellipse({
-                    //     left: endX,
-                    //     top: endY,
-                    //     rx: startX - endX,
-                    //     ry: startY - endY
-                    // });
                 }
-                this.target.add(shape);
                 this.target.renderAll();
                 this.target.forEachObject(function(object) {
                     object.selectable = true;
@@ -92,5 +74,22 @@ class TextBoxMenu {
             });
         }
     }
+    createRect(left, top, width, height) {
+        const shape = new fabric.Rect({
+            left: left,
+            top: top,
+            width: width,
+            height: height
+        });
+        this.target.add(shape);
+    }
+    createCircle(left, top, radius) {
+        const shape = new fabric.Circle({
+            left: left,
+            top: top,
+            radius: radius
+        });
+        this.target.add(shape);
+    }
 }
-export default TextBoxMenu;
+export default CreateShape;
