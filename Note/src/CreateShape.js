@@ -1,8 +1,7 @@
 class CreateShape {
     constructor(target) {
         this.target = target;
-        this.isHoge = false;
-        this.isHuga = true;
+        this.name = 'createShape';
     }
     action() {
         const types = ['Rect', 'Circle', 'Textbox'];
@@ -84,7 +83,8 @@ class CreateShape {
         const options = {
             left: leftValue,
             top: topValue,
-            fill: '#ccc'
+            fill: '#ccc',
+            stroke: '#000'
         };
         // end
         if (type === 'Rect') {
