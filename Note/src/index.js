@@ -1,9 +1,6 @@
 import Canvas from './Canvas';
 import CreateShape from './CreateShape';
-import ArtMenu from './ArtMenu';
-import ColorMenu from './ColorMenu';
-import BrushMenu from './BrushMenu';
-import DownloadMenu from './DownloadMenu';
+import UnRedo from './UnRedo';
 //canvas
 const canvas = new Canvas();
 window.onresize = async () => {
@@ -18,11 +15,8 @@ window.onkeydown = e => {
 };
 //tool
 const createShape = new CreateShape(canvas.board);
-// const artMenu = new ArtMenu();
-// const colorMenu = new ColorMenu();
-// const brushMenu = new BrushMenu();
-// const downloadMenu = new DownloadMenu();
-// const tool = new Tool(canvas.board);
+const unredo = new UnRedo(canvas.board);
+unredo.action();
 
 window.onkeydown = e => {
     if (e.key === 'y') {
@@ -44,8 +38,8 @@ window.onload = () => {
         // downloadMenu
     );
     tools.forEach(tool => {
-        canvas.createTool(tool);
-        document.getElementById(tool).addEventListener('click', () => {
+        canvas.createTool(tool.name);
+        document.getElementById(tool.name).addEventListener('click', () => {
             tool.action();
         });
     });
