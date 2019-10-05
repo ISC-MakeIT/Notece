@@ -87,6 +87,52 @@ body {
                 background: #eee;
                 height: 90.3%;
                 width: 100%;
+                overflow-y: auto;
+                .left-log {
+                    background: url('../img/latestContents.png') no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    height: 50%;
+                    width: 100%;
+                    position: relative;
+                    &-title,
+                    &-icon,
+                    &-explanation,
+                    &-date {
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        position: absolute;
+                    }
+                    .left-log-title {
+                        left: 3.21%;
+                        top: 13.5%;
+                        height: 16.21%;
+                        width: 31.56%;
+                    }
+                    .left-log-explanation {
+                        left: 3.21%;
+                        top: 35.13%;
+                        height: 59.46%;
+                        width: 41.8%;
+                    }
+                    .left-log-icon {
+                        left: 45.9%;
+                        top: 8.1%;
+                        height: 27.02%;
+                        width: 8.2%;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .left-log-date {
+                        left: 65.32%;
+                        top: 13.5%;
+                        height: 16.21%;
+                        width: 19.13%;
+                    }
+                }
             }
         }
     }

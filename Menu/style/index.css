@@ -150,5 +150,61 @@ body #wrapper #main #contents {
   background: #eee;
   height: 90.3%;
   width: 100%;
+  overflow-y: auto;
+}
+
+body #wrapper #main #contents .left-log {
+  background: url("../img/latestContents.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+body #wrapper #main #contents .left-log-title, body #wrapper #main #contents .left-log-icon, body #wrapper #main #contents .left-log-explanation, body #wrapper #main #contents .left-log-date {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+body #wrapper #main #contents .left-log .left-log-title {
+  left: 3.21%;
+  top: 13.5%;
+  height: 16.21%;
+  width: 31.56%;
+}
+
+body #wrapper #main #contents .left-log .left-log-explanation {
+  left: 3.21%;
+  top: 35.13%;
+  height: 59.46%;
+  width: 41.8%;
+}
+
+body #wrapper #main #contents .left-log .left-log-icon {
+  left: 45.9%;
+  top: 8.1%;
+  height: 27.02%;
+  width: 8.2%;
+}
+
+body #wrapper #main #contents .left-log .left-log-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+body #wrapper #main #contents .left-log .left-log-date {
+  left: 65.32%;
+  top: 13.5%;
+  height: 16.21%;
+  width: 19.13%;
 }
 /*# sourceMappingURL=index.css.map */
