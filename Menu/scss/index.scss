@@ -1,0 +1,93 @@
+html {
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: #c49a6a;
+    height: 100%;
+    padding: 2.5%;
+    width: 100%;
+    #wrapper {
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        #side {
+            background: #fff;
+            height: 100%;
+            width: 20%;
+            #icon-area {
+                height: 40%;
+                padding: 10% 15% 0 15%;
+                width: 100%;
+                #icon {
+                    background: url('../img/icon.png') no-repeat;
+                    width: 100%;
+                    height: 65%;
+                    background-size: contain;
+                    background-position: center center;
+                }
+            }
+            #side-nav {
+                height: 60%;
+                width: 100%;
+                ul {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+                    @for $i from 1 through 4 {
+                        li:nth-child(#{$i}) {
+                            background: url('../img/sideTag#{$i}.png')
+                                no-repeat;
+                            background-size: contain;
+                            background-position: center center;
+                            height: 20%;
+                            width: 87%;
+                        }
+                    }
+                }
+            }
+        }
+        #main {
+            height: 100%;
+            width: 80%;
+            #timeline-nav {
+                background: #ccc;
+                height: 9.7%;
+                width: 100%;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    width: 100%;
+                    li {
+                        align-items: center;
+                        display: flex;
+                        font-size: 2.4rem;
+                        font-weight: bold;
+                        justify-content: center;
+                        height: 100%;
+                        width: calc(100% / 4);
+                    }
+                    #timeline-group {
+                        border-right: 1px solid #000;
+                        border-left: 1px solid #000;
+                    }
+                    #timeline-channel {
+                        border-right: 1px solid #000;
+                    }
+                }
+            }
+            #contents {
+                background: #eee;
+                height: 90.3%;
+                width: 100%;
+            }
+        }
+    }
+}
