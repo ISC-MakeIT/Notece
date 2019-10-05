@@ -14,8 +14,8 @@ window.onkeydown = e => {
     }
 };
 //tool
-const createShape = new CreateShape(canvas.board);
 const unredo = new UnRedo(canvas.board);
+const createShape = new CreateShape(canvas.board, unredo);
 unredo.action();
 
 window.onkeydown = e => {
