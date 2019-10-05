@@ -3,7 +3,7 @@ class Menu {
         this.root = document.getElementById('contents');
     }
     DomReset() {
-        root.textContent = null;
+        this.root.textContent = null;
     }
     MovePage(targetPage) {
         this.DomReset();
@@ -15,12 +15,12 @@ class Menu {
             tmp.id = id;
         }
         if (className) {
-            tmp.classNam = className;
+            tmp.className = className;
         }
         if (inner) {
             tmp.innerHTML = inner;
         }
-        document.querySelector(parent).appendChild(tmp);
+        parent.appendChild(tmp);
     }
 }
 
