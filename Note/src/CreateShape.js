@@ -1,7 +1,8 @@
 class CreateShape {
-    constructor(target) {
+    constructor(target, unredo) {
         this.target = target;
         this.name = 'createShape';
+        this.UnRedo = unredo;
     }
     action() {
         const types = ['Rect', 'Circle', 'Textbox'];
@@ -42,6 +43,7 @@ class CreateShape {
                     object.selectable = true;
                 });
                 this.target.off('mouse:down');
+                this.UnRedo.updateCanvas();
             });
         } else {
             console.log('hello');
@@ -55,10 +57,11 @@ class CreateShape {
                 this.create(startX, startY, endX, endY, type);
                 this.target.off('mouse:down');
                 this.target.off('mouse:up');
-            });
-            this.target.renderAll();
-            this.target.forEachObject(function(object) {
-                object.selectable = true;
+                this.target.renderAll();
+                this.target.forEachObject(function(object) {
+                    object.selectable = true;
+                });
+                this.UnRedo.updateCanvas();
             });
         }
     }
