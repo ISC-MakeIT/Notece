@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass Menu {\r\n    constructor() {\r\n        this.root = document.getElementById('content');\r\n    }\r\n    DomReset() {\r\n        root.textContent = null;\r\n    }\r\n    MovePage(targetPage) {\r\n        this.DomReset();\r\n        targetPage.init();\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Menu);\r\n\n\n//# sourceURL=webpack:///./src/Menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass Menu {\r\n    constructor() {\r\n        this.root = document.getElementById('contents');\r\n    }\r\n    DomReset() {\r\n        this.root.textContent = null;\r\n    }\r\n    MovePage(targetPage) {\r\n        this.DomReset();\r\n        targetPage.init();\r\n    }\r\n    createElement(el, id, className, inner, parent) {\r\n        const tmp = document.createElement(el);\r\n        if (id) {\r\n            tmp.id = id;\r\n        }\r\n        if (className) {\r\n            tmp.className = className;\r\n        }\r\n        if (inner) {\r\n            tmp.innerHTML = inner;\r\n        }\r\n        parent.appendChild(tmp);\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Menu);\r\n\n\n//# sourceURL=webpack:///./src/Menu.js?");
+
+/***/ }),
+
+/***/ "./src/TimeLine.js":
+/*!*************************!*\
+  !*** ./src/TimeLine.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n\r\nclass TimeLine extends _Menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n    constructor() {\r\n        super();\r\n        this.count = 0;\r\n    }\r\n    display(logs) {\r\n        this.DomReset();\r\n        logs.forEach(log => {\r\n            let logName;\r\n            if (this.count % 2) {\r\n                logName = 'left-log';\r\n            } else {\r\n                logName = 'left-log';\r\n            }\r\n            const bg = document.createElement('div');\r\n            bg.className = logName;\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                `${logName}-title`,\r\n                `<p>${log.title}</p>`,\r\n                bg\r\n            );\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                `${logName}-explanation`,\r\n                `<p>${log.explanation}</p>`,\r\n                bg\r\n            );\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                `${logName}-icon`,\r\n                `<img src=\"${log.icon}\">`,\r\n                bg\r\n            );\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                `${logName}-date`,\r\n                `<p>${log.date}</p>`,\r\n                bg\r\n            );\r\n            document.getElementById('contents').appendChild(bg);\r\n            this.count++;\r\n        });\r\n    }\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (TimeLine);\r\n\n\n//# sourceURL=webpack:///./src/TimeLine.js?");
 
 /***/ }),
 
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Menu {\r\n    construct
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n\r\n// import timelineLog from './timeline-log';\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n// timelineLog.forEach(log => {\r\n// timeline.display(log);\r\ntimeline.display(timelineLog);\r\n// });\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
