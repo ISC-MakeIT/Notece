@@ -1,0 +1,59 @@
+html {
+    font-size: 10px;
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+#background {
+    background: #c49a6a;
+    border-radius: 2.4rem;
+    border: 0.1rem solid #bbb;
+    display: grid;
+    grid-template-columns: 1.25% 7.5% 1fr 3.75%;
+    grid-template-rows: 0.625% 1fr 0.625%;
+    height: 100%;
+    #canvas-wrapper {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        height: 100%;
+        #canvas {
+            background: #fff;
+            border-radius: 2.4rem 0 0 2.4rem;
+        }
+        .upper-canvas {
+            border-radius: 2.4rem 0 0 2.4rem;
+        }
+    }
+    #side-wrapper {
+        background: #fff;
+        border-radius: 0 2.4rem 2.4rem 0;
+        grid-column: 4/5;
+        grid-row: 2/3;
+        #side-image {
+            height: 84vh;
+            margin: 7vh 0 7vh 0;
+            width: 3.75vw;
+        }
+    }
+    #tool-wrapper {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        #tag-wrapper {
+            height: 100%;
+            padding: 7.2rem 0 0 0;
+            .tag {
+                display: block;
+                height: 13%;
+                margin: 0 0 2rem 0;
+                width: 100%;
+            }
+            @for $i from 1 through 6 {
+                .tag:nth-child(#{$i}) {
+                    background: url('../img/Tag#{$i}.png') center no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
