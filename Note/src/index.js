@@ -1,6 +1,8 @@
 import Canvas from './Canvas';
 import CreateShape from './CreateShape';
 import UnRedo from './UnRedo';
+import Drawing from './Drawing';
+import Post from './Post';
 //canvas
 const canvas = new Canvas();
 window.onresize = async () => {
@@ -8,14 +10,12 @@ window.onresize = async () => {
     canvas.board.setWidth(parentSize.clientWidth);
     canvas.board.setHeight(parentSize.clientHeight);
 };
-window.onkeydown = e => {
-    if (e.key === 'y') {
-        canvas.board.isDrawingMode = !canvas.board.isDrawingMode;
-    }
-};
 //tool
+const array = [];
 const unredo = new UnRedo(canvas.board);
 const createShape = new CreateShape(canvas.board, unredo);
+const drawing = new Drawing(canvas.board);
+const post = new Post(canvas.board, array, 'damegane');
 unredo.action();
 
 window.onkeydown = e => {
@@ -30,13 +30,7 @@ window.onkeydown = e => {
 };
 
 window.onload = () => {
-    const tools = Array(
-        createShape
-        // artMenu,
-        // colorMenu,
-        // brushMenu,
-        // downloadMenu
-    );
+    const tools = Array(drawing, createShape, post);
     tools.forEach(tool => {
         canvas.createTool(tool.name);
         document.getElementById(tool.name).addEventListener('click', () => {
