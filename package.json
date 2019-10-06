@@ -1,0 +1,24 @@
+{
+  "name": "Notece",
+  "version": "1.0.0",
+  "description": "<img src=\"https://uploda1.ysklog.net/eee1d71487629b9e9785d8ce46866d3f.png\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISC-MakeIT/Notece.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISC-MakeIT/Notece/issues"
+  },
+  "homepage": "https://github.com/ISC-MakeIT/Notece#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
