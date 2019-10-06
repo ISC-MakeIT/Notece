@@ -7,7 +7,62 @@ body {
   height: 100%;
 }
 
-#background {
+body #modal-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #modal-wrapper #modal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border-radius: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50%;
+  width: 50%;
+}
+
+body #modal-wrapper #modal * {
+  font-size: 2rem;
+  width: 70%;
+}
+
+body #modal-wrapper #modal #title {
+  height: 10%;
+}
+
+body #modal-wrapper #modal #explanation {
+  height: 25%;
+}
+
+body #modal-wrapper #modal #submit {
+  width: 50%;
+  height: 15%;
+}
+
+body #background {
   background: #c49a6a;
   border-radius: 2.4rem;
   border: 0.1rem solid #bbb;
@@ -20,7 +75,7 @@ body {
   height: 100%;
 }
 
-#background #canvas-wrapper {
+body #background #canvas-wrapper {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
@@ -30,16 +85,16 @@ body {
   height: 100%;
 }
 
-#background #canvas-wrapper #canvas {
+body #background #canvas-wrapper #canvas {
   background: #fff;
   border-radius: 2.4rem 0 0 2.4rem;
 }
 
-#background #canvas-wrapper .upper-canvas {
+body #background #canvas-wrapper .upper-canvas {
   border-radius: 2.4rem 0 0 2.4rem;
 }
 
-#background #side-wrapper {
+body #background #side-wrapper {
   background: #fff;
   border-radius: 0 2.4rem 2.4rem 0;
   -ms-grid-column: 4;
@@ -50,13 +105,13 @@ body {
   grid-row: 2/3;
 }
 
-#background #side-wrapper #side-image {
+body #background #side-wrapper #side-image {
   height: 84vh;
   margin: 7vh 0 7vh 0;
   width: 3.75vw;
 }
 
-#background #tool-wrapper {
+body #background #tool-wrapper {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -65,44 +120,44 @@ body {
   grid-row: 2/3;
 }
 
-#background #tool-wrapper #tag-wrapper {
+body #background #tool-wrapper #tag-wrapper {
   height: 100%;
   padding: 7.2rem 0 0 0;
 }
 
-#background #tool-wrapper #tag-wrapper .tag {
+body #background #tool-wrapper #tag-wrapper .tag {
   display: block;
   height: 13%;
   margin: 0 0 2rem 0;
   width: 100%;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(1) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(1) {
   background: url("../img/Tag1.png") center no-repeat;
   background-size: cover;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(2) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(2) {
   background: url("../img/Tag2.png") center no-repeat;
   background-size: cover;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(3) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(3) {
   background: url("../img/Tag3.png") center no-repeat;
   background-size: cover;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(4) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(4) {
   background: url("../img/Tag4.png") center no-repeat;
   background-size: cover;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(5) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(5) {
   background: url("../img/Tag5.png") center no-repeat;
   background-size: cover;
 }
 
-#background #tool-wrapper #tag-wrapper .tag:nth-child(6) {
+body #background #tool-wrapper #tag-wrapper .tag:nth-child(6) {
   background: url("../img/Tag6.png") center no-repeat;
   background-size: cover;
 }
