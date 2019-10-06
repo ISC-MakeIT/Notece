@@ -16,6 +16,14 @@ class TimeLine extends Menu {
                 `<p>${log.title}</p>`,
                 bg
             );
+            const tmp = document.createElement('div');
+            tmp.className = `${logName}-title`;
+            tmp.innerHTML = `<p>${log.title}</p>`;
+            bg.appendChild(tmp);
+            tmp.addEventListener('click', () => {
+                localStorage.setItem('note', JSON.stringify(log.data));
+                window.location.href = '../html/ShowNote.html';
+            });
             this.createElement(
                 'div',
                 0,
