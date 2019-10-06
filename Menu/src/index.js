@@ -6,3 +6,6 @@ const timeline = new TimeLine();
 // timeline.display(log);
 timeline.display(timelineLog);
 // });
+document.getElementById('newNote').addEventListener('click', () => {
+    window.location.href = '../../Note/html/index.html';
+});
