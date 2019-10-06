@@ -2,17 +2,11 @@ import Menu from './Menu';
 class TimeLine extends Menu {
     constructor() {
         super();
-        this.count = 0;
     }
     display(logs) {
         this.DomReset();
         logs.forEach(log => {
-            let logName;
-            if (this.count % 2) {
-                logName = 'left-log';
-            } else {
-                logName = 'left-log';
-            }
+            let logName = 'left-log';
             const bg = document.createElement('div');
             bg.className = logName;
             this.createElement(
