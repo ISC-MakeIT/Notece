@@ -1,0 +1,210 @@
+html {
+  font-size: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #c49a6a;
+  height: 100%;
+  padding: 2.5%;
+  width: 100%;
+}
+
+body #wrapper {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body #wrapper #side {
+  background: #fff;
+  height: 100%;
+  width: 20%;
+}
+
+body #wrapper #side #icon-area {
+  height: 40%;
+  padding: 10% 15% 0 15%;
+  width: 100%;
+}
+
+body #wrapper #side #icon-area #icon {
+  background: url("../img/icon.png") no-repeat;
+  width: 100%;
+  height: 65%;
+  background-size: contain;
+  background-position: center center;
+}
+
+body #wrapper #side #side-nav {
+  height: 60%;
+  width: 100%;
+}
+
+body #wrapper #side #side-nav ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #wrapper #side #side-nav ul li:nth-child(1) {
+  background: url("../img/sideTag1.png") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 20%;
+  width: 87%;
+}
+
+body #wrapper #side #side-nav ul li:nth-child(2) {
+  background: url("../img/sideTag2.png") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 20%;
+  width: 87%;
+}
+
+body #wrapper #side #side-nav ul li:nth-child(3) {
+  background: url("../img/sideTag3.png") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 20%;
+  width: 87%;
+}
+
+body #wrapper #side #side-nav ul li:nth-child(4) {
+  background: url("../img/sideTag4.png") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 20%;
+  width: 87%;
+}
+
+body #wrapper #main {
+  height: 100%;
+  width: 80%;
+}
+
+body #wrapper #main #timeline-nav {
+  background: #ccc;
+  height: 9.7%;
+  width: 100%;
+}
+
+body #wrapper #main #timeline-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+body #wrapper #main #timeline-nav ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.4rem;
+  font-weight: bold;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: calc(100% / 4);
+}
+
+body #wrapper #main #timeline-nav ul #timeline-group {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-channel {
+  border-right: 1px solid #000;
+}
+
+body #wrapper #main #contents {
+  background: #eee;
+  height: 90.3%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+body #wrapper #main #contents .left-log {
+  background: url("../img/latestContents.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+body #wrapper #main #contents .left-log-title, body #wrapper #main #contents .left-log-icon, body #wrapper #main #contents .left-log-explanation, body #wrapper #main #contents .left-log-date {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+body #wrapper #main #contents .left-log .left-log-title {
+  left: 3.21%;
+  top: 13.5%;
+  height: 16.21%;
+  width: 31.56%;
+}
+
+body #wrapper #main #contents .left-log .left-log-explanation {
+  left: 3.21%;
+  top: 35.13%;
+  height: 59.46%;
+  width: 41.8%;
+}
+
+body #wrapper #main #contents .left-log .left-log-icon {
+  left: 45.9%;
+  top: 8.1%;
+  height: 27.02%;
+  width: 8.2%;
+}
+
+body #wrapper #main #contents .left-log .left-log-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+body #wrapper #main #contents .left-log .left-log-date {
+  left: 65.32%;
+  top: 13.5%;
+  height: 16.21%;
+  width: 19.13%;
+}
+/*# sourceMappingURL=index.css.map */
