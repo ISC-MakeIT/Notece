@@ -1,11 +1,11 @@
 import TimeLine from './TimeLine';
-// import timelineLog from './timeline-log';
 
 const timeline = new TimeLine();
-// timelineLog.forEach(log => {
-// timeline.display(log);
-timeline.display(timelineLog);
-// });
+if (localStorage.getItem('data') === null) {
+    localStorage.setItem('data', JSON.stringify(timelineLog));
+}
+const data = localStorage.getItem('data');
+timeline.display(JSON.parse(data));
 document.getElementById('newNote').addEventListener('click', () => {
     window.location.href = '../../Note/html/index.html';
 });

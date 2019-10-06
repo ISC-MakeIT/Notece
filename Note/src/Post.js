@@ -1,11 +1,12 @@
 class Post {
-    constructor(target, dataArray, user) {
+    constructor(target, array, user) {
         this.target = target;
-        this.array = dataArray;
+        this.array = array;
         this.user = user;
     }
     action() {
         this.displayModal();
+        console.log(JSON.parse(localStorage.getItem('data')));
         document.getElementById('submit').addEventListener('click', () => {
             const date = new Date();
             this.array.unshift({
@@ -22,9 +23,11 @@ class Post {
                     ':' +
                     date.getMinutes(),
                 data: JSON.stringify(this.target),
-                icon: '../img/icon.png'
+                icon: '../../Menu/img/icon.png'
             });
-            window.location.href = '';
+            // localStorage.clear();
+            localStorage.setItem('data', JSON.stringify(this.array));
+            window.location.href = '../../Menu/html/index.html';
         });
     }
     displayModal() {

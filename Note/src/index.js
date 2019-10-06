@@ -11,11 +11,10 @@ window.onresize = async () => {
     canvas.board.setHeight(parentSize.clientHeight);
 };
 //tool
-const array = [];
 const unredo = new UnRedo(canvas.board);
 const createShape = new CreateShape(canvas.board, unredo);
 const drawing = new Drawing(canvas.board);
-const post = new Post(canvas.board, array, 'damegane');
+const post = new Post(canvas.board, timelineLog, 'damegane');
 unredo.action();
 
 window.onkeydown = e => {
