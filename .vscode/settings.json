@@ -1,7 +1,15 @@
 {
-  "editor.insertSpaces": true,
-  "editor.tabSize": 4,
-  "files.eol": "\r\n",
-  "prettier.singleQuote": true,
-  "editor.formatOnSave": true
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../style/"
+        }
+    ],
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.eol": "\r\n",
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "editor.formatOnSave": true
 }

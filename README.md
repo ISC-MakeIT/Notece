@@ -1,24 +1,118 @@
 <img src="https://uploda1.ysklog.net/eee1d71487629b9e9785d8ce46866d3f.png">
 
+***
+# ディレクトリ構造
+rootはブランチと同じ名前にしてください(workは含めずに)
+
+<img src="https://uploda1.ysklog.net/1d8ce29b857e00e110e5e2a44dd20899.png">
+
+***
 # コーディング規約
 |設定|詳細|
 |----|---|
 |改行コード|CRLF|
 |スペース | 4 |
+|クォーテーション|シングル|
 
-> * その他の設定はprettierを準拠
-> * 詳細は```./.vscode/setting.json```を参照
+* その他の設定はprettierを準拠
+* 詳細は```./.vscode/setting.json```を参照
+<<<<<<< HEAD
+
+***
+# CSS
+### プロパティ
+アルファベット順に記述する
+```css
+/*sample*/
+#hoge {
+  align-text: center;
+  background: #2b2b2b;
+  color: #000;
+}
+```
+### ファイルの分割
+コンテンツごとに分ける<br>
+htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportする<br>
+//例=>style.css, header.css, main.css, footer.css<br>
+
+=======
+
+***
+# CSS
+### プロパティ
+アルファベット順に記述する
+```css
+/*sample*/
+#hoge {
+  align-text: center;
+  background: #2b2b2b;
+  color: #000;
+}
+```
+### ファイルの分割
+コンテンツごとに分ける<br>
+htmlにimportする時はstyle.cssにまとめてからstyle.cssのみimportする<br>
+//例=>style.css, header.css, main.css, footer.css<br>
+
+>>>>>>> d1fd13936b2eceb2fb1d125cd966fe9c4aae316b
+### 使用単位
+相対単位のみ使用可
+```css
+html {
+  font-size: 10px;
+}
+```
+<<<<<<< HEAD
+を指定し、標準単位はremとします。
+remはhtml要素に指定されたpxを基準とします。
+```css
+p {
+  font-size: 1rem; //1rem=10px
+}
+```
+その他の単位は適宜変えてください。
+単位の違いは<a href="https://programming-style.com/css/reference/unit/" target="_blank" rel="noopener">このサイト</a>を参考にしてください。
+  
+***
+# JS
+### 多分動くと思うからリリースしようぜ
+とりあえず求められている機能を実装することを意識してください<br>
+コードはいくら綺麗に書いても動かなければ意味はありません。<br>
+ただし規約はできる限り遵守してください。些細なことでも無視し続ければ全体的に瓦解します。<br>
+=======
+を指定しremを標準単位とする。<br>
+>remはhtmlのfont-sizeを基準として計算されるので
+```css
+#hoge {
+  font-size: 2rem;//10px * 2 = 20pxとなる
+}
+```
+
+***
+# JS
+### 多分動くと思うからリリースしようぜ
+とりあえず言われた機能を実装することを意識してください<br>
+コードはいくら綺麗に書いても動かなければ意味はありません。<br>
+ですが規約は基本的に遵守しましょう。細かいところでも無視していくと瓦解します。
+>>>>>>> d1fd13936b2eceb2fb1d125cd966fe9c4aae316b
+リファクタリングは動いてからやりましょう。<br>
+
+***
 # GitHub
 ## ブランチ
-> ページごとに作る
+ページごとに作る<br>
+//NewNote<br>
+//NewNote-work =>　作業用
 ## コミット粒度
->コミット=セーブです<br>
+コミット=セーブです<br>
 1タスクごとにコミットしましょう　事故を減らします。<br>
 例えばADDとFIXを一緒にコミットメッセージに書かなければいけなくなったとしたらそれはもうアウトです。<br>
 ゲームでもルート分岐がある時はセーブするでしょう？それと一緒です。
-## コミットメッセージ
+
+***
+# コミットメッセージ
 ### 構文
->表の順番に当てはめていくこと
+表の順番に当てはめていくこと
 
 |-|操作|種類|対象名|
 |-|-|-|-|
@@ -46,3 +140,4 @@
 #### CLOSE
 >OPENが解決した
 //例=>CLOSE directory / XXX.拡張子 /　エラー内容
+***
