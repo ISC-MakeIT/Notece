@@ -151,6 +151,19 @@ body #wrapper #main #contents {
   height: 90.3%;
   width: 100%;
   overflow-y: auto;
+  position: relative;
+}
+
+body #wrapper #main #contents #name {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+body #wrapper #main #contents #comment {
+  position: absolute;
+  top: 54%;
+  left: 22%;
 }
 
 body #wrapper #main #contents .left-log {
