@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/Comment.js":
+/*!************************!*\
+  !*** ./src/Comment.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n\r\nclass Comment extends _Menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n    display(logs) {\r\n        logs.forEach(log => {\r\n            this.DomReset();\r\n            const wrapper = document.createElement('div');\r\n            wrapper.className = 'comment-wrapper';\r\n            this.root.appendChild(wrapper);\r\n            const bg = document.createElement('div');\r\n            bg.className = 'comment';\r\n            const commentator = document.createElement('img');\r\n            commentator.className = 'comment-commentator';\r\n            commentator.src = log.commentator;\r\n            wrapper.appendChild(commentator);\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                'comment-info',\r\n                `<p>comment to </p><span>${log.title}</span>`,\r\n                bg\r\n            );\r\n            this.createElement(\r\n                'div',\r\n                0,\r\n                'comment-container',\r\n                `<p>${log.comment}</p>`,\r\n                bg\r\n            );\r\n            wrapper.appendChild(bg);\r\n        });\r\n    }\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Comment);\r\n\n\n//# sourceURL=webpack:///./src/Comment.js?");
+
+/***/ }),
+
 /***/ "./src/Menu.js":
 /*!*********************!*\
   !*** ./src/Menu.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Men
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    window.location.href = '../../Note/html/index.html';\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n/* harmony import */ var _Comment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Comment */ \"./src/Comment.js\");\n\r\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst comment = new _Comment__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\n\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    window.location.href = '../../Note/html/index.html';\r\n});\r\n\r\ndocument.getElementById('timeline-group').addEventListener('click', () => {\r\n    timeline.display(JSON.parse(data));\r\n});\r\ndocument.getElementById('timeline-comment').addEventListener('click', () => {\r\n    comment.display(timelineComment);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
