@@ -88,6 +88,62 @@ body {
                 height: 90.3%;
                 width: 100%;
                 overflow-y: auto;
+                #confirm-wrapper {
+                    background: rgba($color: #f00, $alpha: 0.5);
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #confirm {
+                        background: #fff;
+                        height: 50%;
+                        width: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        // display: grid;
+                        // grid-template-columns: 50% 50%;
+                        // grid-template-rows: calc(100% / 3);
+                        #confirm-title {
+                            // grid-column: 1/3;
+                            // grid-row: 1/2;
+                            font-size: 3.6rem;
+                            width: 100%;
+                            height: calc(100% / 3);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        #confirm-return {
+                            // grid-column: 1/2;
+                            // grid-row: 2/3;
+                            font-size: 2.4rem;
+                            padding: 10%;
+                            background: #ccc;
+                            width: 30%;
+                            height: calc(100% / 3);
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            margin: 0 auto;
+                            border-radius: 3.6rem;
+                        }
+                        #confirm-go {
+                            // grid-column: 2/3;
+                            // grid-row: 2/3;
+                            font-size: 2.4rem;
+                            padding: 10%;
+                            margin: 0 auto;
+                            background: #f00;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            width: 30%;
+                            height: calc(100% / 3);
+                            border-radius: 3.6rem;
+                        }
+                    }
+                }
                 .left-log {
                     background: url('../img/latestContents.png') no-repeat;
                     background-size: cover;
@@ -131,6 +187,52 @@ body {
                         top: 13.5%;
                         height: 16.21%;
                         width: 19.13%;
+                    }
+                }
+                .comment-wrapper {
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    .comment-comentator {
+                        width: 30%;
+                        height: 100%;
+                    }
+                    .comment {
+                        height: 100%;
+                        width: 70%;
+                        background: url('../img/Rectangle.png') no-repeat;
+                        background-size: contain;
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 5% 20% 50% 25%;
+                        .comment-info {
+                            grid-row: 2/3;
+                            grid-column: 1/2;
+                            display: grid;
+                            grid-template-columns: 30% 40% 1fr;
+                            grid-template-rows: 1fr;
+                            text-align: center;
+                            font-size: 2.4rem;
+                            * {
+                                grid-row: 1/2;
+                            }
+                            p {
+                                grid-column: 1/2;
+                            }
+                            span {
+                                background: #ccc;
+                                grid-column: 2/3;
+                            }
+                        }
+                        .comment-container {
+                            padding: 5%;
+                            text-align: center;
+                            grid-row: 3/4;
+                            grid-column: 1/2;
+                            font-size: 2.4rem;
+                        }
                     }
                 }
             }
