@@ -88,6 +88,62 @@ body {
                 height: 90.3%;
                 width: 100%;
                 overflow-y: auto;
+                #confirm-wrapper {
+                    background: rgba($color: #f00, $alpha: 0.5);
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #confirm {
+                        background: #fff;
+                        height: 50%;
+                        width: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        // display: grid;
+                        // grid-template-columns: 50% 50%;
+                        // grid-template-rows: calc(100% / 3);
+                        #confirm-title {
+                            // grid-column: 1/3;
+                            // grid-row: 1/2;
+                            font-size: 3.6rem;
+                            width: 100%;
+                            height: calc(100% / 3);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        #confirm-return {
+                            // grid-column: 1/2;
+                            // grid-row: 2/3;
+                            font-size: 2.4rem;
+                            padding: 10%;
+                            background: #ccc;
+                            width: 30%;
+                            height: calc(100% / 3);
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            margin: 0 auto;
+                            border-radius: 3.6rem;
+                        }
+                        #confirm-go {
+                            // grid-column: 2/3;
+                            // grid-row: 2/3;
+                            font-size: 2.4rem;
+                            padding: 10%;
+                            margin: 0 auto;
+                            background: #f00;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            width: 30%;
+                            height: calc(100% / 3);
+                            border-radius: 3.6rem;
+                        }
+                    }
+                }
                 .left-log {
                     background: url('../img/latestContents.png') no-repeat;
                     background-size: cover;

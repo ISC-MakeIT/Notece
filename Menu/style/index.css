@@ -153,6 +153,83 @@ body #wrapper #main #contents {
   overflow-y: auto;
 }
 
+body #wrapper #main #contents #confirm-wrapper {
+  background: rgba(255, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm {
+  background: #fff;
+  height: 50%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-title {
+  font-size: 3.6rem;
+  width: 100%;
+  height: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-return {
+  font-size: 2.4rem;
+  padding: 10%;
+  background: #ccc;
+  width: 30%;
+  height: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  border-radius: 3.6rem;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-go {
+  font-size: 2.4rem;
+  padding: 10%;
+  margin: 0 auto;
+  background: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: calc(100% / 3);
+  border-radius: 3.6rem;
+}
+
 body #wrapper #main #contents .left-log {
   background: url("../img/latestContents.png") no-repeat;
   background-size: cover;
