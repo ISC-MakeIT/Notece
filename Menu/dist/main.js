@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Menu {\r\n    construct
 
 /***/ }),
 
+/***/ "./src/Profile.js":
+/*!************************!*\
+  !*** ./src/Profile.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n\r\nclass Profile extends _Menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n    constructor() {\r\n        super();\r\n    }\r\n\r\n    display() {\r\n        this.DomReset();\r\n\r\n        const name = document.createElement('input');\r\n        name.type = \"text\";\r\n        name.className = \"text\";\r\n\r\n        const comment = document.createElement('input');\r\n        comment.type = \"textbox\";\r\n        comment.className = \"text\";\r\n\r\n        document.getElementById('contents').appendChild(name);\r\n        document.getElementById('contents').appendChild(comment);\r\n\r\n    }\r\n\r\n\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Profile);\n\n//# sourceURL=webpack:///./src/Profile.js?");
+
+/***/ }),
+
 /***/ "./src/TimeLine.js":
 /*!*************************!*\
   !*** ./src/TimeLine.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Men
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    window.location.href = '../../Note/html/index.html';\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n/* harmony import */ var _Profile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Profile */ \"./src/Profile.js\");\n\r\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    window.location.href = '../../Note/html/index.html';\r\n});\r\n\r\nconst profile = new _Profile__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\ndocument.getElementById('profile').addEventListener('click', () => {\r\n    profile.display();\r\n}, false);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
