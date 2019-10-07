@@ -1,8 +1,10 @@
 import TimeLine from './TimeLine';
 import Comment from './Comment';
+import Confirm from './Confirm';
 
 const timeline = new TimeLine();
 const comment = new Comment();
+const confirm = new Confirm();
 if (localStorage.getItem('data') === null) {
     localStorage.setItem('data', JSON.stringify(timelineLog));
 }
@@ -10,7 +12,7 @@ const data = localStorage.getItem('data');
 timeline.display(JSON.parse(data));
 
 document.getElementById('newNote').addEventListener('click', () => {
-    window.location.href = '../../Note/html/index.html';
+    confirm.display();
 });
 
 document.getElementById('timeline-group').addEventListener('click', () => {
