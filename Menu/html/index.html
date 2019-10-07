@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="../style/html5reset-1.6.1.css" />
-        <link rel="stylesheet" href="../style/index.css" />
-        <title>Notice</title>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="side">
-                <div id="icon-area">
-                    <div id="icon"></div>
-                    <div id="icon-name"></div>
-                </div>
-                <nav id="side-nav">
-                    <ul>
-                        <li id="newNote"></li>
-                        <li id="log"></li>
-                        <li id="profile"></li>
-                        <li id="settings"></li>
-                    </ul>
-                </nav>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../style/html5reset-1.6.1.css" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <title>Notice</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="side">
+            <div id="icon-area">
+                <div id="icon"></div>
+                <div id="icon-name">MakeIT</div>
             </div>
-            <div id="main">
-                <nav id="timeline-nav">
-                    <ul>
-                        <li id="timeline-search"></li>
-                        <li id="timeline-group">グループ</li>
-                        <li id="timeline-channel">チャンネル</li>
-                        <li id="timeline-comment">コメント</li>
-                    </ul>
-                </nav>
-                <div id="contents"></div>
-            </div>
+            <nav id="side-nav">
+                <ul>
+                    <li id="newNote"></li>
+                    <li id="log"></li>
+                    <li id="profile"></li>
+                    <li id="settings"></li>
+                </ul>
+            </nav>
         </div>
-        <script src="../../timeline-log.js"></script>
-        <script src="../dist/main.js"></script>
-    </body>
+        <div id="main">
+            <nav id="timeline-nav">
+                <ul>
+                    <li id="timeline-search"><input id="searchbox" type="text" placeholder="search"></li>
+                    <li id="timeline-group">グループ</li>
+                    <li id="timeline-channel">チャンネル</li>
+                    <li id="timeline-comment">コメント</li>
+                </ul>
+            </nav>
+            <div id="contents"></div>
+        </div>
+    </div>
+    <script src="../../timeline-comment.js"></script>
+    <script src="../../timeline-log.js"></script>
+    <script src="../dist/main.js"></script>
+</body>
+
 </html>

@@ -44,6 +44,13 @@ body #wrapper #side #icon-area #icon {
   background-position: center center;
 }
 
+body #wrapper #side #icon-area #icon-name {
+  margin-top: 1.6rem;
+  font-size: 3.6rem;
+  text-align: center;
+  width: 100%;
+}
+
 body #wrapper #side #side-nav {
   height: 60%;
   width: 100%;
@@ -137,6 +144,35 @@ body #wrapper #main #timeline-nav ul li {
   width: calc(100% / 4);
 }
 
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox {
+  border-radius: 2.4rem;
+  display: block;
+  font-size: 1.6rem;
+  height: 50%;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox:-ms-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::-ms-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
 body #wrapper #main #timeline-nav ul #timeline-group {
   border-right: 1px solid #000;
   border-left: 1px solid #000;
@@ -151,6 +187,83 @@ body #wrapper #main #contents {
   height: 90.3%;
   width: 100%;
   overflow-y: auto;
+}
+
+body #wrapper #main #contents #confirm-wrapper {
+  background: rgba(255, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm {
+  background: #fff;
+  height: 50%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-title {
+  font-size: 3.6rem;
+  width: 100%;
+  height: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-return {
+  font-size: 2.4rem;
+  padding: 10%;
+  background: #ccc;
+  width: 30%;
+  height: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  border-radius: 3.6rem;
+}
+
+body #wrapper #main #contents #confirm-wrapper #confirm #confirm-go {
+  font-size: 2.4rem;
+  padding: 10%;
+  margin: 0 auto;
+  background: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: calc(100% / 3);
+  border-radius: 3.6rem;
 }
 
 body #wrapper #main #contents .left-log {
@@ -176,6 +289,7 @@ body #wrapper #main #contents .left-log-title, body #wrapper #main #contents .le
 }
 
 body #wrapper #main #contents .left-log .left-log-title {
+  font-size: 2.4rem;
   left: 3.21%;
   top: 13.5%;
   height: 16.21%;
@@ -183,6 +297,7 @@ body #wrapper #main #contents .left-log .left-log-title {
 }
 
 body #wrapper #main #contents .left-log .left-log-explanation {
+  font-size: 1.2rem;
   left: 3.21%;
   top: 35.13%;
   height: 59.46%;
@@ -202,9 +317,89 @@ body #wrapper #main #contents .left-log .left-log-icon img {
 }
 
 body #wrapper #main #contents .left-log .left-log-date {
+  font-size: 1.6rem;
   left: 65.32%;
   top: 13.5%;
   height: 16.21%;
   width: 19.13%;
+}
+
+body #wrapper #main #contents .comment-wrapper {
+  height: 30%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment-comentator {
+  width: 30%;
+  height: 100%;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment {
+  height: 100%;
+  width: 70%;
+  background: url("../img/Rectangle.png") no-repeat;
+  background-size: contain;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 5% 20% 50% 25%;
+      grid-template-rows: 5% 20% 50% 25%;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment .comment-info {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 40% 1fr;
+      grid-template-columns: 30% 40% 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment .comment-info * {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment .comment-info p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment .comment-info span {
+  background: #ccc;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+body #wrapper #main #contents .comment-wrapper .comment .comment-container {
+  padding: 5%;
+  text-align: center;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 2.4rem;
 }
 /*# sourceMappingURL=index.css.map */
