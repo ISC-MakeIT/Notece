@@ -44,6 +44,13 @@ body #wrapper #side #icon-area #icon {
   background-position: center center;
 }
 
+body #wrapper #side #icon-area #icon-name {
+  margin-top: 1.6rem;
+  font-size: 3.6rem;
+  text-align: center;
+  width: 100%;
+}
+
 body #wrapper #side #side-nav {
   height: 60%;
   width: 100%;
@@ -135,6 +142,35 @@ body #wrapper #main #timeline-nav ul li {
           justify-content: center;
   height: 100%;
   width: calc(100% / 4);
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox {
+  border-radius: 2.4rem;
+  display: block;
+  font-size: 1.6rem;
+  height: 50%;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox:-ms-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::-ms-input-placeholder {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body #wrapper #main #timeline-nav ul #timeline-search #searchbox::placeholder {
+  text-align: center;
+  font-size: 2.4rem;
 }
 
 body #wrapper #main #timeline-nav ul #timeline-group {
@@ -253,6 +289,7 @@ body #wrapper #main #contents .left-log-title, body #wrapper #main #contents .le
 }
 
 body #wrapper #main #contents .left-log .left-log-title {
+  font-size: 2.4rem;
   left: 3.21%;
   top: 13.5%;
   height: 16.21%;
@@ -260,6 +297,7 @@ body #wrapper #main #contents .left-log .left-log-title {
 }
 
 body #wrapper #main #contents .left-log .left-log-explanation {
+  font-size: 1.2rem;
   left: 3.21%;
   top: 35.13%;
   height: 59.46%;
@@ -279,6 +317,7 @@ body #wrapper #main #contents .left-log .left-log-icon img {
 }
 
 body #wrapper #main #contents .left-log .left-log-date {
+  font-size: 1.6rem;
   left: 65.32%;
   top: 13.5%;
   height: 16.21%;

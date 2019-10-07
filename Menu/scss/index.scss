@@ -29,6 +29,12 @@ body {
                     background-size: contain;
                     background-position: center center;
                 }
+                #icon-name {
+                    margin-top: 1.6rem;
+                    font-size: 3.6rem;
+                    text-align: center;
+                    width: 100%;
+                }
             }
             #side-nav {
                 height: 60%;
@@ -73,6 +79,20 @@ body {
                         justify-content: center;
                         height: 100%;
                         width: calc(100% / 4);
+                    }
+                    #timeline-search {
+                        #searchbox {
+                            border-radius: 2.4rem;
+                            display: block;
+                            font-size: 1.6rem;
+                            height: 50%;
+                            margin: 0 auto;
+                            width: 80%;
+                        }
+                        #searchbox::placeholder {
+                            text-align: center;
+                            font-size: 2.4rem;
+                        }
                     }
                     #timeline-group {
                         border-right: 1px solid #000;
@@ -161,12 +181,14 @@ body {
                         position: absolute;
                     }
                     .left-log-title {
+                        font-size: 2.4rem;
                         left: 3.21%;
                         top: 13.5%;
                         height: 16.21%;
                         width: 31.56%;
                     }
                     .left-log-explanation {
+                        font-size: 1.2rem;
                         left: 3.21%;
                         top: 35.13%;
                         height: 59.46%;
@@ -183,6 +205,7 @@ body {
                         }
                     }
                     .left-log-date {
+                        font-size: 1.6rem;
                         left: 65.32%;
                         top: 13.5%;
                         height: 16.21%;
