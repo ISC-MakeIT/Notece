@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Men
 
 /***/ }),
 
+/***/ "./src/Confirm.js":
+/*!************************!*\
+  !*** ./src/Confirm.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n\r\nclass Confirm extends _Menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n    display(timeline, data) {\r\n        this.DomReset();\r\n        this.createElement('div', 'confirm-wrapper', 0, 0, this.root);\r\n        this.createElement(\r\n            'div',\r\n            'confirm',\r\n            0,\r\n            0,\r\n            document.getElementById('confirm-wrapper')\r\n        );\r\n        this.createElement(\r\n            'p',\r\n            'confirm-title',\r\n            0,\r\n            '<p>新しいノートを作成する</p>',\r\n            document.getElementById('confirm')\r\n        );\r\n        this.createElement(\r\n            'div',\r\n            'confirm-return',\r\n            0,\r\n            '戻る',\r\n            document.getElementById('confirm')\r\n        );\r\n        this.createElement(\r\n            'div',\r\n            'confirm-go',\r\n            0,\r\n            '作成する',\r\n            document.getElementById('confirm')\r\n        );\r\n        document.getElementById('confirm-go').addEventListener('click', () => {\r\n            window.location.href = '../../Note/html/index.html';\r\n        });\r\n        document\r\n            .getElementById('confirm-return')\r\n            .addEventListener('click', () => {\r\n                window.location.href = '../html/index.html';\r\n            });\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Confirm);\r\n\n\n//# sourceURL=webpack:///./src/Confirm.js?");
+
+/***/ }),
+
 /***/ "./src/Menu.js":
 /*!*********************!*\
   !*** ./src/Menu.js ***!
@@ -130,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Men
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n/* harmony import */ var _Comment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Comment */ \"./src/Comment.js\");\n\r\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst comment = new _Comment__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\n\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    window.location.href = '../../Note/html/index.html';\r\n});\r\n\r\ndocument.getElementById('timeline-group').addEventListener('click', () => {\r\n    timeline.display(JSON.parse(data));\r\n});\r\ndocument.getElementById('timeline-comment').addEventListener('click', () => {\r\n    comment.display(timelineComment);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _TimeLine__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimeLine */ \"./src/TimeLine.js\");\n/* harmony import */ var _Comment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Comment */ \"./src/Comment.js\");\n/* harmony import */ var _Confirm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Confirm */ \"./src/Confirm.js\");\n\r\n\r\n\r\n\r\nconst timeline = new _TimeLine__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst comment = new _Comment__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nconst confirm = new _Confirm__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\nif (localStorage.getItem('data') === null) {\r\n    localStorage.setItem('data', JSON.stringify(timelineLog));\r\n}\r\nconst data = localStorage.getItem('data');\r\ntimeline.display(JSON.parse(data));\r\n\r\ndocument.getElementById('newNote').addEventListener('click', () => {\r\n    confirm.display(timeline.display(JSON.parse(data)));\r\n});\r\n\r\ndocument.getElementById('timeline-group').addEventListener('click', () => {\r\n    timeline.display();\r\n});\r\ndocument.getElementById('timeline-comment').addEventListener('click', () => {\r\n    comment.display(timelineComment);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
