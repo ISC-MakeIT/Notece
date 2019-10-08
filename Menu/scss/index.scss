@@ -109,7 +109,7 @@ body {
                 width: 100%;
                 overflow-y: auto;
                 #confirm-wrapper {
-                    background: rgba($color: #f00, $alpha: 0.5);
+                    background: rgba($color: #f00, $alpha: 0.2);
                     height: 100%;
                     width: 100%;
                     display: flex;
@@ -154,7 +154,7 @@ body {
                             font-size: 2.4rem;
                             padding: 10%;
                             margin: 0 auto;
-                            background: #f00;
+                            background: #99f84b;
                             display: flex;
                             justify-content: space-around;
                             align-items: center;

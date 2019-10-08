@@ -190,7 +190,7 @@ body #wrapper #main #contents {
 }
 
 body #wrapper #main #contents #confirm-wrapper {
-  background: rgba(255, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.2);
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -252,7 +252,7 @@ body #wrapper #main #contents #confirm-wrapper #confirm #confirm-go {
   font-size: 2.4rem;
   padding: 10%;
   margin: 0 auto;
-  background: #f00;
+  background: #99f84b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
